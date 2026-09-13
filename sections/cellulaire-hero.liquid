@@ -1,0 +1,106 @@
+<section class="hero hero--{{ section.settings.variant }} {% if section.settings.composite_mobile and section.settings.mobile_image == blank %}hero--composite{% endif %} wrap">
+  <div class="hero-copy">
+    {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+    <h1>{{ section.settings.heading | escape | newline_to_br }}</h1>
+    <p>{{ section.settings.description | escape }}</p>
+    {% if section.settings.button_label != blank %}<a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} <span>→</span></a>{% endif %}
+  </div>
+  <div class="hero-image desktop-only">{% render 'cellulaire-image', image: section.settings.image, fallback: section.settings.fallback, alt: section.settings.image_alt, loading: 'eager', sizes: '60vw' %}</div>
+  <div class="hero-image mobile-only">{% render 'cellulaire-image', image: section.settings.mobile_image, fallback: section.settings.mobile_fallback, alt: section.settings.image_alt, loading: 'eager', sizes: '100vw' %}</div>
+</section>
+
+{% schema %}
+{
+  "name": "Cellulaire hero",
+  "settings": [
+    {
+      "type": "select",
+      "id": "variant",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "home",
+          "label": "Home"
+        },
+        {
+          "value": "about",
+          "label": "About"
+        },
+        {
+          "value": "contact",
+          "label": "Contact"
+        }
+      ],
+      "default": "home"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Where Science\nMeets Luxury"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Advanced skincare. Visible results. A refined everyday ritual."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button",
+      "default": "Shop face mists"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "checkbox",
+      "id": "composite_mobile",
+      "label": "Use supplied composite mobile banner",
+      "info": "The PDF mobile banner contains lettering. Accessible text and a working link overlay are retained. Upload a clean photo to use native visible text.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "fallback",
+      "label": "Bundled desktop asset",
+      "default": "cellulaire-hero.webp"
+    },
+    {
+      "type": "text",
+      "id": "mobile_fallback",
+      "label": "Bundled mobile asset",
+      "default": "cellulaire-hero-mobile.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "default": "Cellulaire face mist ritual"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire hero"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,170 @@
+{
+  "sections": {
+    "hero": {
+      "type": "cellulaire-hero",
+      "settings": {
+        "variant": "about",
+        "eyebrow": "About Cellulaire",
+        "heading": "Where Science\nMeets Luxury",
+        "description": "Exceptional skincare begins with exceptional science. We create high-performance, sensorial skincare that delivers visible results \u2014 and a more confident you.",
+        "button_label": "Our story",
+        "button_link": "#our-story",
+        "fallback": "cellulaire-about-hero.webp",
+        "mobile_fallback": "cellulaire-about-mobile.webp"
+      }
+    },
+    "our_story": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "about-story",
+        "anchor": "our-story",
+        "inset": true,
+        "eyebrow": "Our Story",
+        "small_eyebrow": true,
+        "heading": "A Higher Standard\nfor Everyday Skincare",
+        "description": "Cellulaire was born from a simple belief: exceptional skincare begins with exceptional science. Every product is developed through a thoughtful process that combines advanced research, carefully selected ingredients, and uncompromising quality standards. We create skincare that balances performance with elegance \u2014 because true luxury is confidence that comes from within.",
+        "button_label": "Our story",
+        "button_link": "#our-story",
+        "fallback": "cellulaire-woman.webp",
+        "mobile_fallback": "cellulaire-woman-mobile.webp",
+        "composite_image": true,
+        "image_alt": "A moment of self-care",
+        "overlay": "More\nThan Skincare.\nA Brighter You.",
+        "aside": ""
+      }
+    },
+    "values": {
+      "type": "cellulaire-values",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "value",
+          "settings": {
+            "icon": "science",
+            "heading": "Science",
+            "description": "Backed by research and powered by proven ingredients for visible results."
+          }
+        },
+        "1": {
+          "type": "value",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Precision",
+            "description": "Thoughtfully formulated with clean, effective ingredients and exacting standards."
+          }
+        },
+        "2": {
+          "type": "value",
+          "settings": {
+            "icon": "diamond",
+            "heading": "Experience",
+            "description": "A refined, sensorial ritual that turns everyday skincare into a luxury experience."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "formulas": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "formulas",
+        "eyebrow": "",
+        "heading": "Elevated Formulas.\nReal Results.",
+        "description": "From our signature Face Mists to every skincare essential, each formula is designed to deliver effective performance while offering a luxurious, sensorial experience.",
+        "button_label": "Discover our formulas",
+        "button_link": "/pages/science",
+        "fallback": "cellulaire-formulas.webp",
+        "aside": "Same\nexceptional\nscience\na brighter you"
+      }
+    },
+    "mission": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "mission",
+        "inset": true,
+        "eyebrow": "Our Mission",
+        "small_eyebrow": true,
+        "heading": "Skincare That Inspires\nConfidence, Every Day",
+        "description": "We are committed to creating innovative, high-quality skincare that helps you look and feel your best. Through science, integrity and a passion for excellence, we strive to make luxury skincare a part of everyday life \u2014 for everyone.",
+        "button_label": "",
+        "fallback": "cellulaire-texture.webp",
+        "image_alt": "A refined skincare texture",
+        "aside": ""
+      }
+    },
+    "collection": {
+      "type": "cellulaire-products",
+      "settings": {
+        "eyebrow": "Our Signature Collection",
+        "heading": "The Face Mist Collection",
+        "description": "Four targeted formulas. One elevated routine.",
+        "compact": true
+      },
+      "blocks": {
+        "0": {
+          "type": "product",
+          "settings": {
+            "title": "Night Care Face Mist",
+            "description": "Repair. Renew. Rebalance.",
+            "fallback": "cellulaire-product-night.webp"
+          }
+        },
+        "1": {
+          "type": "product",
+          "settings": {
+            "title": "Brightening Face Mist",
+            "description": "Even. Brighten. Illuminate.",
+            "fallback": "cellulaire-product-brightening.webp"
+          }
+        },
+        "2": {
+          "type": "product",
+          "settings": {
+            "title": "Sun Protection Face Mist",
+            "description": "Defend. Soothe. Glow.",
+            "fallback": "cellulaire-product-sun.webp"
+          }
+        },
+        "3": {
+          "type": "product",
+          "settings": {
+            "title": "Hydration Face Mist",
+            "description": "Refresh. Hydrate. Plump.",
+            "fallback": "cellulaire-product-hydration.webp"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "collection_cta": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "cta",
+        "eyebrow": "",
+        "heading": "Discover the\nComplete Collection",
+        "description": "Science-backed skincare for real results.",
+        "button_label": "Shop all products",
+        "fallback": "cellulaire-story.webp",
+        "aside": "More\nthan skincare\na brighter you"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "our_story",
+    "values",
+    "formulas",
+    "mission",
+    "collection",
+    "collection_cta"
+  ]
+}

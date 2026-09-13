@@ -1,0 +1,13 @@
+<section class="wrap inset shop-section"><h1>Shop by Collection</h1><div class="journal-grid">{% for collection in collections %}<article><a href="{{ collection.url }}">{% if collection.image != blank %}{{ collection.image | image_url: width: 800 | image_tag: alt: collection.title, loading: 'lazy' }}{% endif %}<h2>{{ collection.title | escape }}</h2></a></article>{% endfor %}</div></section>
+
+{% schema %}
+{
+  "name": "Cellulaire collections",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Cellulaire collections"
+    }
+  ]
+}
+{% endschema %}

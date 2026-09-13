@@ -1,0 +1,8 @@
+extends: theme-check:recommended
+ignore:
+  - tmp/**
+  - tools/**
+  - tests/**
+  - docs/**
+  - output/**
+  - node_modules/**

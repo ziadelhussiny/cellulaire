@@ -1,0 +1,141 @@
+<section id="{{ section.settings.anchor | default: section.id }}" class="editorial editorial--{{ section.settings.layout }} wrap {% if section.settings.inset %}inset{% endif %}">
+  <div class="editorial-copy">{% if section.settings.eyebrow != blank %}<p class="{% if section.settings.small_eyebrow %}eyebrow{% endif %}">{{ section.settings.eyebrow | escape }}</p>{% endif %}<h2>{{ section.settings.heading | escape | newline_to_br }}</h2><p>{{ section.settings.description | escape }}</p>{% if section.settings.button_label != blank %}<a class="{% if section.settings.layout == 'story' %}button button-outline{% elsif section.settings.layout == 'about-story' %}text-link{% else %}button{% endif %}" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} →</a>{% endif %}</div>
+  <div class="editorial-image">
+    <div {% if section.settings.mobile_fallback != blank or section.settings.mobile_image != blank %}class="desktop-only"{% endif %}>{% render 'cellulaire-image', image: section.settings.image, fallback: section.settings.fallback, alt: section.settings.image_alt %}</div>
+    {% if section.settings.mobile_fallback != blank or section.settings.mobile_image != blank %}<div class="mobile-only">{% render 'cellulaire-image', image: section.settings.mobile_image, fallback: section.settings.mobile_fallback, alt: section.settings.image_alt %}</div>{% endif %}
+    {% if section.settings.overlay != blank %}<h3 class="image-caption {% if section.settings.composite_image and section.settings.image == blank %}caption-composite-desktop{% endif %} {% if section.settings.composite_image and section.settings.mobile_image == blank %}caption-composite-mobile{% endif %}">{{ section.settings.overlay | escape | newline_to_br }}</h3>{% endif %}
+  </div>
+  {% if section.settings.aside != blank %}<p class="editorial-aside eyebrow">{{ section.settings.aside | escape | newline_to_br }}</p>{% endif %}
+  {% if section.settings.layout == 'story' %}<a class="story-mobile" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}"><img src="{{ 'cellulaire-woman-wide.webp' | asset_url }}" width="148" height="86" alt="A refined skincare ritual"><div><h3>Science<br>In Every Drop</h3><p class="eyebrow">Real results.<br>A brighter you.</p></div></a>{% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Cellulaire editorial",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "story",
+          "label": "Story"
+        },
+        {
+          "value": "about-story",
+          "label": "About-Story"
+        },
+        {
+          "value": "formulas",
+          "label": "Formulas"
+        },
+        {
+          "value": "mission",
+          "label": "Mission"
+        },
+        {
+          "value": "cta",
+          "label": "Cta"
+        }
+      ],
+      "default": "story"
+    },
+    {
+      "type": "checkbox",
+      "id": "inset",
+      "label": "Inset",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Section anchor"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Story"
+    },
+    {
+      "type": "checkbox",
+      "id": "small_eyebrow",
+      "label": "Spaced eyebrow",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Exceptional Skincare\nBegins with a Belief"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "At Cellulaire, we combine advanced science, carefully selected ingredients, and a commitment to quality to create skincare that delivers real results while offering a luxurious sensory experience."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Our story"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "mobile_fallback",
+      "label": "Bundled mobile asset"
+    },
+    {
+      "type": "checkbox",
+      "id": "composite_image",
+      "label": "Bundled image includes its caption",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "fallback",
+      "label": "Bundled asset",
+      "default": "cellulaire-story.webp"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "default": "The Cellulaire face mist collection"
+    },
+    {
+      "type": "textarea",
+      "id": "overlay",
+      "label": "Image caption"
+    },
+    {
+      "type": "textarea",
+      "id": "aside",
+      "label": "Side text",
+      "default": "More\nthan skincare\na brighter you"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire editorial"
+    }
+  ]
+}
+{% endschema %}

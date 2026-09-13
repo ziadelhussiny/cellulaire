@@ -1,0 +1,21 @@
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{% case name %}
+{% when 'menu' %}<path d="M4 6h16M4 12h16M4 18h16"/>
+{% when 'search' %}<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>
+{% when 'bag' %}<path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/>
+{% when 'account' %}<circle cx="12" cy="7" r="3.5"/><path d="M4 21v-2a8 8 0 0 1 16 0v2H4Z"/>
+{% when 'drop' %}<path d="M12 2s-7 8-7 13a7 7 0 0 0 14 0c0-5-7-13-7-13Z"/><path d="M8 14c0 3 1 4 3 5"/>
+{% when 'leaf' %}<path d="M4 20 19 4M4 16C0 8 11 2 21 2c0 10-6 21-15 15M10 13l-1-5M13 10l5 1"/>
+{% when 'diamond' %}<path d="m3 7 4-5h10l4 5-9 15L3 7ZM3 7h18M7 2l5 20 5-20M7 7l5-5 5 5"/>
+{% when 'heart' %}<path d="M12 21 3 12C-3 5 7-1 12 6c5-7 15-1 9 6l-9 9Z"/>
+{% when 'science' %}<path d="M9 2h6M10 2v7l-6 11c-1 2 1 2 2 2h12c2 0 3-1 2-3L14 9V2M8 16h8"/><circle cx="11" cy="18" r=".5"/>
+{% when 'mail' %}<rect x="2" y="5" width="20" height="14" rx="1"/><path d="m2 6 10 8 10-8"/>
+{% when 'phone' %}<path d="M7 2 3 4c-2 6 8 17 15 18l4-4-5-5-3 3-6-6 3-3-4-5Z"/>
+{% when 'clock' %}<circle cx="12" cy="12" r="10"/><path d="M12 5v7l5 3"/>
+{% when 'truck' %}<path d="M2 5h12v12H2V5ZM14 10h5l3 5v2h-8M2 10H0"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>
+{% when 'bottle' %}<path d="M10 2h4v5l3 2v13H7V9l3-2V2ZM10 5h4"/>
+{% when 'people' %}<circle cx="12" cy="6" r="3"/><path d="M6 21v-6a6 6 0 0 1 12 0v6H6ZM5 4a3 3 0 0 0 0 6M19 4a3 3 0 0 1 0 6M3 12c-3 2-3 6-2 9M21 12c3 2 3 6 2 9"/>
+{% when 'instagram' %}<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/>
+{% else %}<circle cx="12" cy="12" r="9"/><path d="M8 12h8m-4-4 4 4-4 4"/>
+{% endcase %}
+</svg>

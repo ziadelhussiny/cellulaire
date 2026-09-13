@@ -1,0 +1,35 @@
+<section class="benefits wrap" aria-label="Our approach">
+{% for block in section.blocks %}<div {{ block.shopify_attributes }}>{% render 'cellulaire-icon', name: block.settings.icon %}<span>{{ block.settings.text | escape | newline_to_br }}</span></div>{% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Cellulaire benefits",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon",
+          "default": "drop"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Science-backed\nformulas"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire benefits"
+    }
+  ]
+}
+{% endschema %}

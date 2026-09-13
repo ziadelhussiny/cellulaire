@@ -1,0 +1,8 @@
+tools/**
+tests/**
+docs/**
+tmp/**
+output/**
+node_modules/**
+package*.json
+.gitignore

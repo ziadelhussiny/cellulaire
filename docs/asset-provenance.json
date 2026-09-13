@@ -1,0 +1,408 @@
+[
+  {
+    "asset": "cellulaire-hero.webp",
+    "source": "mockup-1.png",
+    "box": [
+      593,
+      75,
+      1042,
+      333
+    ],
+    "size": [
+      449,
+      258
+    ]
+  },
+  {
+    "asset": "cellulaire-hero-mobile.webp",
+    "source": "mockup-1.png",
+    "box": [
+      1097,
+      99,
+      1408,
+      367
+    ],
+    "size": [
+      311,
+      268
+    ]
+  },
+  {
+    "asset": "cellulaire-about-hero.webp",
+    "source": "mockup-2.png",
+    "box": [
+      578,
+      69,
+      1014,
+      308
+    ],
+    "size": [
+      436,
+      239
+    ]
+  },
+  {
+    "asset": "cellulaire-about-mobile.webp",
+    "source": "mockup-2.png",
+    "box": [
+      1075,
+      345,
+      1406,
+      552
+    ],
+    "size": [
+      331,
+      207
+    ]
+  },
+  {
+    "asset": "cellulaire-contact-hero.webp",
+    "source": "mockup-3.png",
+    "box": [
+      654,
+      76,
+      1057,
+      312
+    ],
+    "size": [
+      403,
+      236
+    ]
+  },
+  {
+    "asset": "cellulaire-contact-mobile.webp",
+    "source": "mockup-3.png",
+    "box": [
+      1115,
+      95,
+      1406,
+      277
+    ],
+    "size": [
+      291,
+      182
+    ]
+  },
+  {
+    "asset": "cellulaire-story.webp",
+    "source": "mockup-1.png",
+    "box": [
+      598,
+      837,
+      885,
+      1019
+    ],
+    "size": [
+      287,
+      182
+    ]
+  },
+  {
+    "asset": "cellulaire-formulas.webp",
+    "source": "mockup-2.png",
+    "box": [
+      594,
+      641,
+      879,
+      806
+    ],
+    "size": [
+      285,
+      165
+    ]
+  },
+  {
+    "asset": "cellulaire-woman.webp",
+    "source": "mockup-2.png",
+    "box": [
+      349,
+      315,
+      639,
+      493
+    ],
+    "size": [
+      290,
+      178
+    ]
+  },
+  {
+    "asset": "cellulaire-woman-mobile.webp",
+    "source": "mockup-2.png",
+    "box": [
+      1095,
+      560,
+      1386,
+      675
+    ],
+    "size": [
+      291,
+      115
+    ]
+  },
+  {
+    "asset": "cellulaire-woman-wide.webp",
+    "source": "mockup-1.png",
+    "box": [
+      1097,
+      797,
+      1245,
+      883
+    ],
+    "size": [
+      148,
+      86
+    ]
+  },
+  {
+    "asset": "cellulaire-texture.webp",
+    "source": "mockup-2.png",
+    "box": [
+      634,
+      815,
+      985,
+      941
+    ],
+    "size": [
+      351,
+      126
+    ]
+  },
+  {
+    "asset": "cellulaire-routine.webp",
+    "source": "mockup-1.png",
+    "box": [
+      1108,
+      920,
+      1255,
+      1005
+    ],
+    "size": [
+      147,
+      85
+    ]
+  },
+  {
+    "asset": "cellulaire-need-night.webp",
+    "source": "mockup-1.png",
+    "box": [
+      488,
+      403,
+      615,
+      498
+    ],
+    "size": [
+      127,
+      95
+    ]
+  },
+  {
+    "asset": "cellulaire-need-hydration.webp",
+    "source": "mockup-1.png",
+    "box": [
+      622,
+      403,
+      748,
+      498
+    ],
+    "size": [
+      126,
+      95
+    ]
+  },
+  {
+    "asset": "cellulaire-need-sun.webp",
+    "source": "mockup-1.png",
+    "box": [
+      755,
+      403,
+      882,
+      498
+    ],
+    "size": [
+      127,
+      95
+    ]
+  },
+  {
+    "asset": "cellulaire-need-brightening.webp",
+    "source": "mockup-1.png",
+    "box": [
+      889,
+      403,
+      1016,
+      498
+    ],
+    "size": [
+      127,
+      95
+    ]
+  },
+  {
+    "asset": "cellulaire-product-night.webp",
+    "source": "mockup-1.png",
+    "box": [
+      354,
+      601,
+      512,
+      735
+    ],
+    "size": [
+      158,
+      134
+    ]
+  },
+  {
+    "asset": "cellulaire-product-hydration.webp",
+    "source": "mockup-1.png",
+    "box": [
+      520,
+      601,
+      677,
+      735
+    ],
+    "size": [
+      157,
+      134
+    ]
+  },
+  {
+    "asset": "cellulaire-product-sun.webp",
+    "source": "mockup-1.png",
+    "box": [
+      686,
+      601,
+      841,
+      735
+    ],
+    "size": [
+      155,
+      134
+    ]
+  },
+  {
+    "asset": "cellulaire-product-brightening.webp",
+    "source": "mockup-1.png",
+    "box": [
+      849,
+      601,
+      1005,
+      735
+    ],
+    "size": [
+      156,
+      134
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-4.webp",
+    "source": "brand-4.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-5.webp",
+    "source": "brand-5.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-6.webp",
+    "source": "brand-6.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-7.webp",
+    "source": "brand-7.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-8.webp",
+    "source": "brand-8.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-9.webp",
+    "source": "brand-9.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-11.webp",
+    "source": "brand-11.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "asset": "cellulaire-brand-13.webp",
+    "source": "brand-13.jpeg",
+    "box": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "size": [
+      1920,
+      1080
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "hero": {
+      "type": "cellulaire-hero",
+      "settings": {
+        "variant": "about",
+        "eyebrow": "Our Science",
+        "heading": "Elevated Formulas.\nReal Results.",
+        "description": "Every formula begins with research, carefully selected ingredients, and an uncompromising commitment to quality.",
+        "button_label": "Explore face mists",
+        "fallback": "cellulaire-about-hero.webp",
+        "mobile_fallback": "cellulaire-about-mobile.webp"
+      }
+    },
+    "values": {
+      "type": "cellulaire-values",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "value",
+          "settings": {
+            "icon": "science",
+            "heading": "Science",
+            "description": "Backed by research and powered by proven ingredients for visible results."
+          }
+        },
+        "1": {
+          "type": "value",
+          "settings": {
+            "icon": "leaf",
+            "heading": "Precision",
+            "description": "Thoughtfully formulated with clean, effective ingredients and exacting standards."
+          }
+        },
+        "2": {
+          "type": "value",
+          "settings": {
+            "icon": "diamond",
+            "heading": "Experience",
+            "description": "A refined, sensorial ritual that turns everyday skincare into a luxury experience."
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "content": {
+      "type": "cellulaire-page",
+      "settings": {
+        "show_heading": false
+      }
+    },
+    "collection_cta": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "cta",
+        "eyebrow": "",
+        "heading": "Discover the\nComplete Collection",
+        "description": "Science-backed skincare for real results.",
+        "button_label": "Shop all products",
+        "fallback": "cellulaire-story.webp",
+        "aside": "More\nthan skincare\na brighter you"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "values",
+    "content",
+    "collection_cta"
+  ]
+}

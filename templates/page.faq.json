@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "faq": {
+      "type": "cellulaire-faq",
+      "settings": {},
+      "blocks": {
+        "0": {
+          "type": "question",
+          "settings": {
+            "question": "Where is my order?",
+            "answer": "<p>Use the tracking link in your shipping confirmation email. For help, contact our Customer Care team with your order number.</p>"
+          }
+        },
+        "1": {
+          "type": "question",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>Please review the store\u2019s return policy or contact Customer Care before sending your order back.</p>"
+          }
+        },
+        "2": {
+          "type": "question",
+          "settings": {
+            "question": "Which Face Mist is right for me?",
+            "answer": "<p>Explore Night Care, Hydration, Sun Protection and Brightening in our collection, or ask our team for product guidance.</p>"
+          }
+        },
+        "3": {
+          "type": "question",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Available delivery methods and estimates are shown at checkout. Your shipping confirmation includes tracking details.</p>"
+          }
+        },
+        "4": {
+          "type": "question",
+          "settings": {
+            "question": "Do you offer international shipping?",
+            "answer": "<p>Enter your delivery address at checkout to see available shipping options for your country.</p>"
+          }
+        },
+        "5": {
+          "type": "question",
+          "settings": {
+            "question": "Can I become a stockist or partner?",
+            "answer": "<p>Choose Wholesale or Collaborations in our contact form and tell us about your business.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "collection_cta": {
+      "type": "cellulaire-editorial",
+      "settings": {
+        "layout": "cta",
+        "eyebrow": "",
+        "heading": "Discover the\nComplete Collection",
+        "description": "Science-backed skincare for real results.",
+        "button_label": "Shop all products",
+        "fallback": "cellulaire-story.webp",
+        "aside": "More\nthan skincare\na brighter you"
+      }
+    }
+  },
+  "order": [
+    "faq",
+    "collection_cta"
+  ]
+}

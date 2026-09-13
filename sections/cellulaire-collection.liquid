@@ -1,0 +1,16 @@
+<section class="wrap inset shop-section"><p class="eyebrow">Our signature collection</p><h1>{{ collection.title | escape }}</h1><div class="rte">{{ collection.description }}</div>
+{% paginate collection.products by 24 %}<form class="collection-controls" method="get"><label for="SortBy">Sort by</label><select id="SortBy" name="sort_by">{% for option in collection.sort_options %}<option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{{ option.name | escape }}</option>{% endfor %}</select><button class="button button-outline" type="submit">Apply</button><span>{{ collection.products_count }} products</span></form>
+<div class="product-grid shop-grid">{% for product in collection.products %}{% render 'cellulaire-product-card', product: product, fallback: 'cellulaire-product-night.webp' %}{% else %}<p>No products in this collection yet.</p>{% endfor %}</div>{% if paginate.pages > 1 %}<nav class="pagination" aria-label="Pagination">{{ paginate | default_pagination }}</nav>{% endif %}{% endpaginate %}
+</section>
+
+{% schema %}
+{
+  "name": "Cellulaire collection",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Cellulaire collection"
+    }
+  ]
+}
+{% endschema %}

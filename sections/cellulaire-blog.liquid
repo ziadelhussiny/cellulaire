@@ -1,0 +1,13 @@
+<section class="wrap inset journal-section"><p class="eyebrow">Science. Beauty. Confidence.</p><h1>{{ blog.title | escape }}</h1>{% paginate blog.articles by 12 %}<div class="journal-grid">{% for article in blog.articles %}<article>{% if article.image != blank %}<a href="{{ article.url }}">{{ article.image | image_url: width: 900 | image_tag: alt: article.title, loading: 'lazy' }}</a>{% endif %}<p class="eyebrow">{{ article.published_at | date: '%B %d, %Y' }}</p><h2><a href="{{ article.url }}">{{ article.title | escape }}</a></h2><p>{{ article.excerpt_or_content | strip_html | truncate: 180 }}</p><a class="text-link" href="{{ article.url }}">Read story →</a></article>{% else %}<p>Stories from Cellulaire will appear here.</p>{% endfor %}</div>{% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}{% endpaginate %}</section>
+
+{% schema %}
+{
+  "name": "Cellulaire journal",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Cellulaire journal"
+    }
+  ]
+}
+{% endschema %}

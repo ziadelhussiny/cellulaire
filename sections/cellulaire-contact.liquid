@@ -1,0 +1,54 @@
+<section class="contact-section wrap inset"><aside class="contact-details"><h2>Get in Touch</h2><p>Reach out through any of the channels below.<br>Our team will respond as soon as possible.</p>
+  {% if section.settings.email != blank %}<a class="contact-channel" href="mailto:{{ section.settings.email | escape }}">{% render 'cellulaire-icon', name: 'mail' %}<span><strong>Customer Care</strong>{{ section.settings.email | escape }}</span><span class="mobile-only">›</span></a>{% endif %}
+  {% if section.settings.phone != blank %}<a class="contact-channel" href="tel:{{ section.settings.phone | remove: ' ' | escape }}">{% render 'cellulaire-icon', name: 'phone' %}<span><strong>Phone Support</strong>{{ section.settings.phone | escape }}</span><span class="mobile-only">›</span></a>{% endif %}
+  {% if section.settings.whatsapp != blank %}<a class="contact-channel" href="{{ section.settings.whatsapp }}">{% render 'cellulaire-icon', name: 'phone' %}<span><strong>WhatsApp</strong>Chat with us</span><span class="mobile-only">›</span></a>{% endif %}
+  <div class="contact-channel">{% render 'cellulaire-icon', name: 'clock' %}<span><strong>Working Hours</strong>{{ section.settings.hours | escape | newline_to_br }}</span></div>
+  <div class="contact-note"><strong>A More Radiant You</strong><p>We're always here to support your skincare journey.</p></div>
+</aside><div class="contact-form-column"><h2>Send Us a Message</h2><p>Fill out the form below and we'll get back to you shortly.</p>
+{% form 'contact', id: 'ContactForm', class: 'contact-form' %}
+  {% if form.posted_successfully? %}<p class="form-success" role="status" tabindex="-1">Thank you. Your message has been sent.</p>{% endif %}
+  {% if form.errors %}<div class="form-error" role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+  <div class="form-two"><label class="sr-only" for="ContactName">Full Name (required)</label><input id="ContactName" name="contact[name]" autocomplete="name" placeholder="Full Name *" value="{{ form.name | default: customer.name | escape }}" required>
+  <label class="sr-only" for="ContactEmail">Email Address (required)</label><input id="ContactEmail" type="email" name="contact[email]" autocomplete="email" placeholder="Email Address *" value="{{ form.email | default: customer.email | escape }}" required {% if form.errors contains 'email' %}aria-invalid="true"{% endif %}></div>
+  <label class="sr-only" for="ContactPhone">Phone Number</label><input id="ContactPhone" type="tel" name="contact[phone]" autocomplete="tel" placeholder="Phone Number" value="{{ form.phone | escape }}">
+  <label class="sr-only" for="ContactSubject">Subject (required)</label><select id="ContactSubject" name="contact[Subject]" required><option value="" disabled selected>Subject * — Select a topic</option><option>Order Support</option><option>Product Questions</option><option>Wholesale</option><option>Collaborations</option><option>Other</option></select>
+  <div class="message-field"><label class="sr-only" for="ContactMessage">Your Message (required)</label><textarea id="ContactMessage" name="contact[body]" placeholder="Your Message *&#10;Tell us how we can help…" rows="6" maxlength="500" data-message required>{{ form.body | escape }}</textarea><span data-counter>0/500</span></div>
+  <button type="submit" class="button">Send message <span>→</span></button>
+{% endform %}
+<div class="inquiry-grid">{% assign topics = 'Order Support,Product Questions,Wholesale,Collaborations' | split: ',' %}{% assign icons = 'truck,bottle,people,heart' | split: ',' %}{% assign descriptions = 'Track your order, shipping or returns.|Find the right formula for your skin.|Partnership and retail inquiries.|Press, creators and brand opportunities.' | split: '|' %}{% assign labels = 'Get help,Ask a question,Learn more,Get in touch' | split: ',' %}{% for topic in topics %}<button data-topic="{{ topic }}" type="button">{% assign icon = icons[forloop.index0] %}{% render 'cellulaire-icon', name: icon %}<strong>{{ topic }}</strong><span class="desktop-only">{{ descriptions[forloop.index0] }}</span><span class="text-link desktop-only">{{ labels[forloop.index0] }} →</span></button>{% endfor %}</div>
+</div></section>
+
+{% schema %}
+{
+  "name": "Cellulaire contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Customer care email",
+      "default": "hello@cellulaire.com"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number"
+    },
+    {
+      "type": "url",
+      "id": "whatsapp",
+      "label": "WhatsApp link"
+    },
+    {
+      "type": "textarea",
+      "id": "hours",
+      "label": "Working hours",
+      "default": "Mon \u2013 Fri, 9AM \u2013 6PM (EST)\nSat \u2013 Sun, 10AM \u2013 4PM (EST)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire contact"
+    }
+  ]
+}
+{% endschema %}

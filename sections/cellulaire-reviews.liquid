@@ -1,0 +1,38 @@
+<section class="reviews wrap inset" data-reviews><h2>{{ section.settings.heading | escape }}</h2><div class="review-row"><button class="icon-button" data-review-prev aria-label="Previous testimonial">‹</button><div aria-live="polite">{% for block in section.blocks %}<blockquote {% unless forloop.first %}hidden{% endunless %} {{ block.shopify_attributes }}><p>“{{ block.settings.quote | escape }}”</p>{% if block.settings.author != blank %}<cite>{{ block.settings.author | escape }}</cite>{% endif %}</blockquote>{% endfor %}</div><button class="icon-button" data-review-next aria-label="Next testimonial">›</button></div></section>
+
+{% schema %}
+{
+  "name": "Cellulaire testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real People. Real Results."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire testimonials"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,42 @@
+<div class="announcement">{{ section.settings.announcement | escape }}<span class="announcement-extra"> &nbsp; | &nbsp; A More Radiant You, Every Day</span></div>
+<header class="site-header wrap">
+  <button class="icon-button mobile-only" data-menu-toggle aria-expanded="false" aria-controls="MobileMenu" aria-label="Open navigation">{% render 'cellulaire-icon', name: 'menu' %}</button>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {% if section.settings.menu != blank %}{% for link in section.settings.menu.links %}<a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endfor %}
+    {% else %}<a href="{{ routes.all_products_collection_url }}">Shop</a><a href="{{ routes.root_url }}pages/our-story">Our Story</a><a href="{{ routes.root_url }}pages/science">Science</a>{% endif %}
+  </nav>
+  <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }} home">{% if settings.logo != blank %}{{ settings.logo | image_url: width: 600 | image_tag: alt: shop.name, width: 220 }}{% else %}<img src="{{ 'cellulaire-logo.png' | asset_url }}" width="220" height="51" alt="Cellulaire">{% endif %}</a>
+  <div class="header-actions"><nav class="desktop-nav" aria-label="Information"><a href="{{ routes.root_url }}blogs/journal">Journal</a><a href="{{ routes.root_url }}pages/faq">Help</a></nav>
+    <a class="icon-button" href="{{ routes.search_url }}" aria-label="Search">{% render 'cellulaire-icon', name: 'search' %}</a>
+    {% if shop.customer_accounts_enabled %}<a class="icon-button desktop-only" href="{{ routes.account_url }}" aria-label="My account">{% render 'cellulaire-icon', name: 'account' %}</a>{% endif %}
+    <a class="icon-button bag" href="{{ routes.cart_url }}" aria-label="Shopping bag">{% render 'cellulaire-icon', name: 'bag' %}<span data-cart-count>{{ cart.item_count }}</span></a>
+  </div>
+  <nav id="MobileMenu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+    {% if section.settings.menu != blank %}{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}{% else %}<a href="{{ routes.all_products_collection_url }}">Shop</a><a href="{{ routes.root_url }}pages/our-story">Our Story</a><a href="{{ routes.root_url }}pages/science">Science</a>{% endif %}
+    <a href="{{ routes.root_url }}blogs/journal">Journal</a><a href="{{ routes.root_url }}pages/faq">Help</a><a href="{{ routes.root_url }}pages/contact">Contact</a>{% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">My account</a>{% endif %}
+  </nav>
+</header>
+
+{% schema %}
+{
+  "name": "Cellulaire header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "announcement",
+      "label": "Announcement",
+      "default": "Free Shipping on Orders Over $50"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Main menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire header"
+    }
+  ]
+}
+{% endschema %}

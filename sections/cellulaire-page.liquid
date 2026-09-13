@@ -1,0 +1,20 @@
+{% if section.settings.show_heading or page.content != blank %}<section class="wrap inset prose-section">{% if section.settings.show_heading %}<h1>{{ page.title | escape }}</h1>{% endif %}<div class="rte">{{ page.content }}</div></section>{% endif %}
+
+{% schema %}
+{
+  "name": "Cellulaire page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show page heading",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire page"
+    }
+  ]
+}
+{% endschema %}

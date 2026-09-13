@@ -1,0 +1,30 @@
+<section class="wrap inset product-section"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Home</a> / <a href="{{ routes.all_products_collection_url }}">Face Mists</a> / {{ product.title | escape }}</nav>
+<div class="product-layout"><div class="product-gallery">{% assign current_variant = product.selected_or_first_available_variant %}{% assign main_image = current_variant.featured_image | default: product.featured_image %}{% if main_image != blank %}{{ main_image | image_url: width: 1400 | image_tag: widths: '400, 800, 1400', sizes: '(min-width: 750px) 50vw, 100vw', alt: product.title, data-main-image: '', loading: 'eager' }}{% endif %}<div class="thumbnails">{% for image in product.images %}<button type="button" data-thumbnail="{{ image | image_url: width: 1400 }}" aria-label="View image {{ forloop.index }}" aria-pressed="{% if image == main_image %}true{% else %}false{% endif %}">{{ image | image_url: width: 160 | image_tag: alt: image.alt, loading: 'lazy' }}</button>{% endfor %}</div></div>
+<div class="product-information"><p class="eyebrow">{{ product.vendor | escape }}</p><h1>{{ product.title | escape }}</h1><p>{{ product.metafields.custom.short_description | escape }}</p><p class="product-price"><span data-product-price>{{ current_variant.price | money }}</span>{% if current_variant.compare_at_price > current_variant.price %} <s>{{ current_variant.compare_at_price | money }}</s>{% endif %}</p><div class="rte">{{ product.description }}</div>
+{% form 'product', product, data-product-form: '' %}<input type="hidden" name="id" value="{{ current_variant.id }}">
+{% unless product.has_only_default_variant %}{% for option in product.options_with_values %}<label for="Option-{{ section.id }}-{{ forloop.index }}">{{ option.name | escape }}</label><select id="Option-{{ section.id }}-{{ forloop.index }}" data-option>{% for value in option.values %}<option value="{{ value | escape }}" {% if value.selected %}selected{% endif %}>{{ value | escape }}</option>{% endfor %}</select>{% endfor %}{% endunless %}
+<script type="application/json" data-variants>{{ product.variants | json }}</script><label for="Quantity-{{ section.id }}">Quantity</label><input id="Quantity-{{ section.id }}" name="quantity" type="number" value="1" min="1" step="1">
+<button class="button" type="submit" {% unless current_variant.available %}disabled{% endunless %}>{% if current_variant.available %}Add to bag{% else %}Sold out{% endif %}</button><p data-form-status role="status"></p>{{ form | payment_terms }}{% endform %}
+{% if section.settings.shipping != blank %}<details class="product-disclosure"><summary>Shipping & returns</summary><div class="rte">{{ section.settings.shipping }}</div></details>{% endif %}
+{% if product.metafields.custom.ingredients != blank %}<details class="product-disclosure"><summary>Ingredients</summary><div class="rte">{{ product.metafields.custom.ingredients | metafield_tag }}</div></details>{% endif %}
+{% if product.metafields.custom.how_to_use != blank %}<details class="product-disclosure"><summary>How to use</summary><div class="rte">{{ product.metafields.custom.how_to_use | metafield_tag }}</div></details>{% endif %}
+</div></div><div class="section-heading"><h2>Complete your ritual</h2><a class="text-link" href="{{ routes.all_products_collection_url }}">View all →</a></div><div class="product-grid">{% for related in collections.all.products limit: 5 %}{% unless related.id == product.id %}{% render 'cellulaire-product-card', product: related, fallback: 'cellulaire-product-night.webp' %}{% endunless %}{% endfor %}</div></section>
+<script type="application/ld+json">{{ product | structured_data }}</script>
+
+{% schema %}
+{
+  "name": "Cellulaire product",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "shipping",
+      "label": "Shipping and returns information"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cellulaire product"
+    }
+  ]
+}
+{% endschema %}

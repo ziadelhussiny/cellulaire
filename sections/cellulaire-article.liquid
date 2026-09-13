@@ -1,0 +1,13 @@
+<article class="wrap inset prose-section"><a class="text-link" href="{{ blog.url }}">← The Journal</a><p class="eyebrow">{{ article.published_at | date: '%B %d, %Y' }}</p><h1>{{ article.title | escape }}</h1>{% if article.image != blank %}{{ article.image | image_url: width: 1600 | image_tag: alt: article.title, loading: 'eager' }}{% endif %}<div class="rte">{{ article.content }}</div></article>
+
+{% schema %}
+{
+  "name": "Cellulaire article",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Cellulaire article"
+    }
+  ]
+}
+{% endschema %}
