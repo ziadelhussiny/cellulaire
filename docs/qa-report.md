@@ -34,3 +34,9 @@ These checks establish local implementation progress; they do not establish that
 - Packaged the updated native Shopify theme; local fixtures, developer tools and documentation are excluded.
 
 Product-media completion pass: mapped the four known face mists and Signature Set to their corresponding bundled imagery in product cards, main galleries and cart lines when Shopify media is absent. A regression test removes media for each of the five products and verifies gallery/cart photo identity and a valid main-image target. Browser checked the five product pages at 1280/390/320 (15 checks), with no overflow or broken loaded images, then added Hydration to the local bag and verified its photo and $28 subtotal.
+
+## Full-width correction
+
+The supplied complaint screenshot showed the storefront capped at 1280 px with large empty side gutters. At a 1920 px browser viewport (1905 px usable width), measured header/hero width was 1280 px with 312.5 px left/right margins. Removed the `.wrap` width cap and automatic centering: all outer page containers now use width:100% with no maximum. Prose remains readable by constraining the inner text to 72ch inside a full-width section.
+
+Verified 11 routes at 2560/1920/1440/1280/900/390/320 (77 checks). Every rendered `.wrap` container begins at x=0 and matches available viewport width within 1 px. No horizontal overflow or broken loaded images. Inspected desktop and mobile screenshots and rechecked the home banner link at both sizes. Packaged the updated stylesheet in the native theme ZIP. This correction is verified locally; it does not change the existing external-store installation status.

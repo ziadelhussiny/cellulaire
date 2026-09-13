@@ -12,7 +12,7 @@ Source of truth: the three user-supplied `image-1.png` (Contact), `image-2.png` 
 
 Warm white/stone/black. Fine rules, rectangular black buttons, elegant high contrast serif headings, restrained sans serif body. Original raster logo and imagery extracted directly from the supplied PNG references and branding PDF. Native headings use Times New Roman/Times to match the restrained serif shape more closely. No generated replacements. Exact font source and full-resolution unflattened photos are not supplied; do not claim exact typography or original photography resolution.
 
-Desktop reference width is approximately 728 px. Scale composition with a 1280 px content maximum. Mobile has centered logo, hamburger, search and bag, all four skin needs and best sellers in one row, hero centered copy, about hero text above collection imagery, contact hero imagery above copy. Maintain usable touch targets and allow product rows to scroll on narrow phones.
+Desktop reference width is approximately 728 px. Use the full available viewport width for page containers, banners, navigation and sections. Do not cap the storefront at 1280 px or center a narrow outer canvas. Keep internal padding responsive; constrain long prose by line length inside its full-width section. Mobile has centered logo, hamburger, search and bag, all four skin needs and best sellers in one row, hero centered copy, about hero text above collection imagery, contact hero imagery above copy. Maintain usable touch targets and allow product rows to scroll on narrow phones.
 
 ## Functional map
 
