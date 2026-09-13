@@ -1,7 +1,7 @@
 <section class="contact-section wrap inset"><aside class="contact-details"><h2>Get in Touch</h2><p>Reach out through any of the channels below.<br>Our team will respond as soon as possible.</p>
   {% if section.settings.email != blank %}<a class="contact-channel" href="mailto:{{ section.settings.email | escape }}">{% render 'cellulaire-icon', name: 'mail' %}<span><strong>Customer Care</strong>{{ section.settings.email | escape }}</span><span class="mobile-only">›</span></a>{% endif %}
   {% if section.settings.phone != blank %}<a class="contact-channel" href="tel:{{ section.settings.phone | remove: ' ' | escape }}">{% render 'cellulaire-icon', name: 'phone' %}<span><strong>Phone Support</strong>{{ section.settings.phone | escape }}</span><span class="mobile-only">›</span></a>{% endif %}
-  {% if section.settings.whatsapp != blank %}<a class="contact-channel" href="{{ section.settings.whatsapp }}">{% render 'cellulaire-icon', name: 'phone' %}<span><strong>WhatsApp</strong>Chat with us</span><span class="mobile-only">›</span></a>{% endif %}
+  {% if section.settings.whatsapp != blank %}<a class="contact-channel" href="{{ section.settings.whatsapp }}">{% render 'cellulaire-icon', name: 'whatsapp' %}<span><strong>WhatsApp</strong>Chat with us</span><span class="mobile-only">›</span></a>{% endif %}
   <div class="contact-channel">{% render 'cellulaire-icon', name: 'clock' %}<span><strong>Working Hours</strong>{{ section.settings.hours | escape | newline_to_br }}</span></div>
   <div class="contact-note"><strong>A More Radiant You</strong><p>We're always here to support your skincare journey.</p></div>
 </aside><div class="contact-form-column"><h2>Send Us a Message</h2><p>Fill out the form below and we'll get back to you shortly.</p>

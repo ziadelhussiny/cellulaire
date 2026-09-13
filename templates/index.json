@@ -3,7 +3,9 @@
     "hero": {
       "type": "cellulaire-hero",
       "settings": {
-        "composite_mobile": true
+        "composite_desktop": true,
+        "composite_mobile": true,
+        "mobile_composite_fallback": "cellulaire-hero-mobile.webp"
       }
     },
     "benefits": {
@@ -53,6 +55,7 @@
         "0": {
           "type": "need",
           "settings": {
+            "handle": "night",
             "heading": "Night Care",
             "description": "Repair & renew",
             "fallback": "cellulaire-need-night.webp",
@@ -62,6 +65,7 @@
         "1": {
           "type": "need",
           "settings": {
+            "handle": "hydration",
             "heading": "Hydration",
             "description": "Refresh & plump",
             "fallback": "cellulaire-need-hydration.webp",
@@ -71,6 +75,7 @@
         "2": {
           "type": "need",
           "settings": {
+            "handle": "sun",
             "heading": "Sun Protection",
             "description": "Defend & glow",
             "fallback": "cellulaire-need-sun.webp",
@@ -80,6 +85,7 @@
         "3": {
           "type": "need",
           "settings": {
+            "handle": "brightening",
             "heading": "Brightening",
             "description": "Even & radiate",
             "fallback": "cellulaire-need-brightening.webp",
@@ -101,6 +107,7 @@
         "0": {
           "type": "product",
           "settings": {
+            "handle": "night-face-mist",
             "title": "Night Care Face Mist",
             "description": "Repair. Renew. Rebalance.",
             "fallback": "cellulaire-product-night.webp"
@@ -109,6 +116,7 @@
         "1": {
           "type": "product",
           "settings": {
+            "handle": "hydration-face-mist",
             "title": "Hydration Face Mist",
             "description": "Refresh. Hydrate. Plump.",
             "fallback": "cellulaire-product-hydration.webp"
@@ -117,6 +125,7 @@
         "2": {
           "type": "product",
           "settings": {
+            "handle": "sun-face-mist",
             "title": "Sun Protection Face Mist",
             "description": "Defend. Soothe. Glow.",
             "fallback": "cellulaire-product-sun.webp"
@@ -125,6 +134,7 @@
         "3": {
           "type": "product",
           "settings": {
+            "handle": "brightening-face-mist",
             "title": "Brightening Face Mist",
             "description": "Even. Brighten. Illuminate.",
             "fallback": "cellulaire-product-brightening.webp"

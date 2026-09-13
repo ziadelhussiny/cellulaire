@@ -3,6 +3,8 @@
     "hero": {
       "type": "cellulaire-hero",
       "settings": {
+        "composite_desktop": true,
+        "composite_fallback": "cellulaire-contact-banner.webp",
         "variant": "contact",
         "eyebrow": "Contact Us",
         "heading": "We\u2019re Here\nfor Your Skin",

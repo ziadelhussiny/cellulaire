@@ -4,12 +4,20 @@ import json
 from PIL import Image
 root = Path(__file__).resolve().parents[1]
 source = root / 'tmp/reference/original'
+attachments = Path(r'C:\Users\zoz\.codex\attachments\3163f67e-d09d-4dd8-bac2-1b06df67370c')
+references = {'mockup-1.png': attachments/'image-2.png', 'mockup-2.png': attachments/'image-3.png', 'mockup-3.png': attachments/'image-1.png'}
 assets = root / 'assets'
 manifest = []
 def crop(name, page, box):
-    image = Image.open(source / page).convert('RGB').crop(box)
+    original = references.get(page, source / page)
+    image = Image.open(original).convert('RGB').crop(box)
     image.save(assets / ('cellulaire-' + name + '.webp'), 'WEBP', quality=95)
-    manifest.append({'asset': 'cellulaire-' + name + '.webp', 'source':page, 'box':box, 'size':image.size})
+    manifest.append({'asset': 'cellulaire-' + name + '.webp', 'source':str(original), 'box':box, 'size':image.size})
+crop('hero-banner', 'mockup-1.png', (315,75,1042,333))
+crop('about-banner', 'mockup-2.png', (322,69,1014,308))
+crop('contact-banner', 'mockup-3.png', (320,76,1057,312))
+crop('about-mobile-banner', 'mockup-2.png', (1075,103,1406,552))
+crop('formulas-mobile', 'brand-13.jpeg', (1000,165,1900,965))
 crop('hero', 'mockup-1.png', (593,75,1042,333))
 crop('hero-mobile', 'mockup-1.png', (1097,99,1408,367))
 crop('about-hero', 'mockup-2.png', (578,69,1014,308))
@@ -31,7 +39,7 @@ for i in [4,5,6,7,8,9,11,13]:
     crop('brand-'+str(i), 'brand-'+str(i)+'.jpeg', (0,0,1920,1080))
 # Use the complete large logo from the branding slide, with the background
 # converted to alpha while retaining the original letterforms.
-logo = Image.open(source/'mockup-1.png').convert('RGB').crop((39,83,278,134))
+logo = Image.open(references['mockup-1.png']).convert('RGB').crop((39,83,278,134))
 gray = logo.convert('L')
 alpha = gray.point(lambda v: max(0,min(255,(200-v)*2)))
 result=Image.new('RGBA',logo.size,(0,0,0,0)); result.putalpha(alpha)

@@ -40,11 +40,12 @@ async function renderSection(type,definition,base,id) {
   const blocks=(definition.block_order||[]).map((key,i)=>{
     const block=definition.blocks[key];const defaults=schema.blocks?.find(b=>b.type===block.type)?.settings||[];
     const blockSettings={...Object.fromEntries(defaults.filter(s=>s.default!==undefined).map(s=>[s.id,s.default])),...block.settings};
-    if(block.type==='product')blockSettings.product=products.find(product=>product.featured_image.src.endsWith(blockSettings.fallback))||products[i%4];
-    if(block.type==='need')blockSettings.collection=collections[productDefinitions[i%4][0]];
+    if(typeof blockSettings.product==='string')blockSettings.product=allProducts.find(product=>product.handle===blockSettings.product);
+    if(typeof blockSettings.collection==='string')blockSettings.collection=collections[blockSettings.collection];
     return {...block,id:key,settings:blockSettings,shopify_attributes:''};
   });
-  if(type==='cellulaire-routine') settings.product=signatureSet;
+  if(typeof settings.product==='string')settings.product=allProducts.find(product=>product.handle===settings.product);
+  if(typeof settings.collection==='string')settings.collection=collections[settings.collection];
   // Expand scalar option value fixtures to Shopify's string-like values.
   const context={...base,section:{id,settings,blocks}};
   return `<div class="shopify-section" id="shopify-section-${id}">${await engine.parseAndRender(preprocess(raw),context)}</div>`;
@@ -64,7 +65,7 @@ export async function renderPage(url,lines=[],form={}) {
   else if(url.pathname==='/blogs/journal'){template='blog';pageType='blog';}
   else if(url.pathname===article.url){template='article';pageType='article';}
   else if(url.pathname==='/collections'){template='list-collections';pageType='list-collections';}
-  const base={page,product,collection,search,blog,article,collections,cart:makeCart(lines),form,customer:{},request:{locale:{iso_code:'en'},page_type:pageType,origin:url.origin},routes:{root_url:'/',all_products_collection_url:'/collections/all',cart_url:'/cart',cart_change_url:'/cart/change',search_url:'/search',account_url:'/account'},settings:{},shop:{name:'Cellulaire',currency:'USD',policies:[],customer_accounts_enabled:false},page_title:product?.title||collection?.title||page.title|| (template==='index'?'Where Science Meets Luxury':template==='blog'?'The Journal':template==='cart'?'Your Bag':'Cellulaire'),canonical_url:url.href,preview_paginate:{pages:1}};
+  const base={page,product,collection,search,blog,article,collections,all_products:Object.fromEntries(allProducts.map(product=>[product.handle,product])),cart:makeCart(lines),form,customer:{},request:{locale:{iso_code:'en'},page_type:pageType,origin:url.origin},routes:{root_url:'/',all_products_collection_url:'/collections/all',cart_url:'/cart',cart_change_url:'/cart/change',search_url:'/search',account_url:'/account'},settings:{},shop:{name:'Cellulaire',currency:'USD',policies:[],customer_accounts_enabled:false},page_title:product?.title||collection?.title||page.title|| (template==='index'?'Where Science Meets Luxury':template==='blog'?'The Journal':template==='cart'?'Your Bag':'Cellulaire'),canonical_url:url.href,preview_paginate:{pages:1}};
   const definition=JSON.parse(await fs.readFile(path.join(project,'templates',template+'.json'),'utf8'));
   const body=(await Promise.all(definition.order.map(id=>renderSection(definition.sections[id].type,definition.sections[id],base,id)))).join('');
   const html=await engine.parseAndRender(preprocess(await fs.readFile(path.join(project,'layout/theme.liquid'),'utf8')),{...base,content_for_layout:body,content_for_header:'',preview_header:await renderGroup('header',base),preview_footer:await renderGroup('footer',base)});

@@ -1,10 +1,12 @@
 {% assign destination = product.url | default: routes.all_products_collection_url %}
 {% assign title = product.title | default: title %}
+{% capture bundled_photo %}{% render 'cellulaire-product-asset', product: product %}{% endcapture %}{% assign bundled_photo = bundled_photo | strip %}{% assign fallback = bundled_photo | default: fallback %}
 <article class="product-card">
   <a class="product-card-image" href="{{ destination }}">{% render 'cellulaire-image', image: product.featured_image, fallback: fallback, alt: title, width: 158, height: 134 %}</a>
-  <div class="product-card-copy"><h3><a href="{{ destination }}">{{ title | escape }}</a></h3><p>{{ product.metafields.custom.short_description | default: description | escape }}</p>
+  <div class="product-card-copy"><h3><a href="{{ destination }}">{% if compact %}{{ title | remove: ' Face Mist' | escape }}{% else %}{{ title | escape }}{% endif %}</a></h3><p>{{ product.metafields.custom.short_description | default: description | escape }}</p>
     {% if product != blank %}<span>{{ product.price | money }}</span>{% endif %}
-    {% if product != blank and product.has_only_default_variant and product.available %}
+    {% if compact %}<a class="button" href="{{ destination }}">Shop now →</a>
+    {% elsif product != blank and product.has_only_default_variant and product.available %}
       {% form 'product', product, data-product-form: '' %}<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><input type="hidden" name="quantity" value="1"><button class="button" type="submit"><span class="desktop-only">Add to bag</span><span class="mobile-only">Add</span></button><p data-form-status role="status"></p>{% endform %}
     {% else %}<a class="button" href="{{ destination }}">{% if product == blank %}Shop now{% elsif product.available %}Choose options{% else %}View product{% endif %}</a>{% endif %}
   </div>

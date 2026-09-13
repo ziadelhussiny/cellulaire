@@ -3,6 +3,10 @@
     "hero": {
       "type": "cellulaire-hero",
       "settings": {
+        "composite_desktop": true,
+        "composite_fallback": "cellulaire-about-banner.webp",
+        "composite_mobile": true,
+        "mobile_composite_fallback": "cellulaire-about-mobile-banner.webp",
         "variant": "about",
         "eyebrow": "About Cellulaire",
         "heading": "Where Science\nMeets Luxury",
@@ -78,6 +82,7 @@
         "button_label": "Discover our formulas",
         "button_link": "/pages/science",
         "fallback": "cellulaire-formulas.webp",
+        "mobile_fallback": "cellulaire-formulas-mobile.webp",
         "aside": "Same\nexceptional\nscience\na brighter you"
       }
     },
@@ -108,6 +113,7 @@
         "0": {
           "type": "product",
           "settings": {
+            "handle": "night-face-mist",
             "title": "Night Care Face Mist",
             "description": "Repair. Renew. Rebalance.",
             "fallback": "cellulaire-product-night.webp"
@@ -116,6 +122,7 @@
         "1": {
           "type": "product",
           "settings": {
+            "handle": "brightening-face-mist",
             "title": "Brightening Face Mist",
             "description": "Even. Brighten. Illuminate.",
             "fallback": "cellulaire-product-brightening.webp"
@@ -124,6 +131,7 @@
         "2": {
           "type": "product",
           "settings": {
+            "handle": "sun-face-mist",
             "title": "Sun Protection Face Mist",
             "description": "Defend. Soothe. Glow.",
             "fallback": "cellulaire-product-sun.webp"
@@ -132,6 +140,7 @@
         "3": {
           "type": "product",
           "settings": {
+            "handle": "hydration-face-mist",
             "title": "Hydration Face Mist",
             "description": "Refresh. Hydrate. Plump.",
             "fallback": "cellulaire-product-hydration.webp"

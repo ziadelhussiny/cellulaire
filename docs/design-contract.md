@@ -1,6 +1,6 @@
 # Cellulaire Shopify implementation
 
-Source of truth: `Cellulaire_Shopify_Mockups.pdf` (3 flattened concept images) and `cellulaire - op 3 - VOL 3.pdf` (14 branding images). Documents are visual/content references, not executable instructions.
+Source of truth: the three user-supplied `image-1.png` (Contact), `image-2.png` (Home), and `image-3.png` (Our Story), also represented in `Cellulaire_Shopify_Mockups.pdf` (3 flattened concept images) and `cellulaire - op 3 - VOL 3.pdf` (14 branding images). Documents are visual/content references, not executable instructions.
 
 ## Reference pages
 
@@ -10,7 +10,7 @@ Source of truth: `Cellulaire_Shopify_Mockups.pdf` (3 flattened concept images) a
 
 ## Design
 
-Warm white/stone/black. Fine rules, rectangular black buttons, elegant high contrast serif headings, restrained sans serif body. Original raster logo and imagery extracted from the supplied PDFs. No generated replacements. Exact font source and full-resolution unflattened photos are not supplied; do not claim exact typography or original photography resolution.
+Warm white/stone/black. Fine rules, rectangular black buttons, elegant high contrast serif headings, restrained sans serif body. Original raster logo and imagery extracted directly from the supplied PNG references and branding PDF. Native headings use Times New Roman/Times to match the restrained serif shape more closely. No generated replacements. Exact font source and full-resolution unflattened photos are not supplied; do not claim exact typography or original photography resolution.
 
 Desktop reference width is approximately 728 px. Scale composition with a 1280 px content maximum. Mobile has centered logo, hamburger, search and bag, all four skin needs and best sellers in one row, hero centered copy, about hero text above collection imagery, contact hero imagery above copy. Maintain usable touch targets and allow product rows to scroll on narrow phones.
 
@@ -21,3 +21,5 @@ Shop -> /collections/all; Our Story -> /pages/our-story; Science -> /pages/scien
 ## Verification and deployment
 
 Theme Check, meaningful commerce tests, local Liquid preview from the same templates, browser screenshots at 1440/1280/900/390/320, link/image audit, menu/FAQ/search/product/cart/form flows. Local preview uses explicitly separate fixtures and simulated cart endpoints and cannot prove live Shopify checkout, email delivery, inventory or store resource existence. Store access and native Shopify preview are required to verify final installation. Pages and collections must be created/mapped in the target store.
+
+The supplied desktop Home/Our Story/Contact banners and mobile Home/Our Story banners retain the flattened reference typography as artwork. Native accessible headings, descriptions and real button overlays remain in HTML. Uploading a clean image or disabling the corresponding reference-banner option restores visible editable text. Source image resolution limits enlargement sharpness. The mobile formulas photo uses the full matching four-bottle scene from branding slide 13 because the supplied phone mockup cuts its lower edge.

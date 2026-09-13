@@ -1,5 +1,5 @@
 {% if image != blank %}
   {{ image | image_url: width: 1800 | image_tag: widths: '320, 640, 960, 1280, 1800', sizes: sizes, loading: loading, alt: alt, class: class }}
 {% else %}
-  <img src="{{ fallback | asset_url }}" alt="{{ alt | escape }}" class="{{ class }}" loading="{{ loading | default: 'lazy' }}" width="{{ width | default: 800 }}" height="{{ height | default: 500 }}">
+  <img src="{{ fallback | asset_url }}" alt="{{ alt | escape }}" class="{{ class }}" loading="{{ loading | default: 'lazy' }}" width="{{ width | default: 800 }}" height="{{ height | default: 500 }}" {% if main %}data-main-image{% endif %}>
 {% endif %}

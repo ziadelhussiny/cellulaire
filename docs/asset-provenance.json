@@ -1,7 +1,77 @@
 [
   {
+    "asset": "cellulaire-hero-banner.webp",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
+    "box": [
+      315,
+      75,
+      1042,
+      333
+    ],
+    "size": [
+      727,
+      258
+    ]
+  },
+  {
+    "asset": "cellulaire-about-banner.webp",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
+    "box": [
+      322,
+      69,
+      1014,
+      308
+    ],
+    "size": [
+      692,
+      239
+    ]
+  },
+  {
+    "asset": "cellulaire-contact-banner.webp",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-1.png",
+    "box": [
+      320,
+      76,
+      1057,
+      312
+    ],
+    "size": [
+      737,
+      236
+    ]
+  },
+  {
+    "asset": "cellulaire-about-mobile-banner.webp",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
+    "box": [
+      1075,
+      103,
+      1406,
+      552
+    ],
+    "size": [
+      331,
+      449
+    ]
+  },
+  {
+    "asset": "cellulaire-formulas-mobile.webp",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-13.jpeg",
+    "box": [
+      1000,
+      165,
+      1900,
+      965
+    ],
+    "size": [
+      900,
+      800
+    ]
+  },
+  {
     "asset": "cellulaire-hero.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       593,
       75,
@@ -15,7 +85,7 @@
   },
   {
     "asset": "cellulaire-hero-mobile.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       1097,
       99,
@@ -29,7 +99,7 @@
   },
   {
     "asset": "cellulaire-about-hero.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       578,
       69,
@@ -43,7 +113,7 @@
   },
   {
     "asset": "cellulaire-about-mobile.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       1075,
       345,
@@ -57,7 +127,7 @@
   },
   {
     "asset": "cellulaire-contact-hero.webp",
-    "source": "mockup-3.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-1.png",
     "box": [
       654,
       76,
@@ -71,7 +141,7 @@
   },
   {
     "asset": "cellulaire-contact-mobile.webp",
-    "source": "mockup-3.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-1.png",
     "box": [
       1115,
       95,
@@ -85,7 +155,7 @@
   },
   {
     "asset": "cellulaire-story.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       598,
       837,
@@ -99,7 +169,7 @@
   },
   {
     "asset": "cellulaire-formulas.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       594,
       641,
@@ -113,7 +183,7 @@
   },
   {
     "asset": "cellulaire-woman.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       349,
       315,
@@ -127,7 +197,7 @@
   },
   {
     "asset": "cellulaire-woman-mobile.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       1095,
       560,
@@ -141,7 +211,7 @@
   },
   {
     "asset": "cellulaire-woman-wide.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       1097,
       797,
@@ -155,7 +225,7 @@
   },
   {
     "asset": "cellulaire-texture.webp",
-    "source": "mockup-2.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-3.png",
     "box": [
       634,
       815,
@@ -169,7 +239,7 @@
   },
   {
     "asset": "cellulaire-routine.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       1108,
       920,
@@ -183,7 +253,7 @@
   },
   {
     "asset": "cellulaire-need-night.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       488,
       403,
@@ -197,7 +267,7 @@
   },
   {
     "asset": "cellulaire-need-hydration.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       622,
       403,
@@ -211,7 +281,7 @@
   },
   {
     "asset": "cellulaire-need-sun.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       755,
       403,
@@ -225,7 +295,7 @@
   },
   {
     "asset": "cellulaire-need-brightening.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       889,
       403,
@@ -239,7 +309,7 @@
   },
   {
     "asset": "cellulaire-product-night.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       354,
       601,
@@ -253,7 +323,7 @@
   },
   {
     "asset": "cellulaire-product-hydration.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       520,
       601,
@@ -267,7 +337,7 @@
   },
   {
     "asset": "cellulaire-product-sun.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       686,
       601,
@@ -281,7 +351,7 @@
   },
   {
     "asset": "cellulaire-product-brightening.webp",
-    "source": "mockup-1.png",
+    "source": "C:\\Users\\zoz\\.codex\\attachments\\3163f67e-d09d-4dd8-bac2-1b06df67370c\\image-2.png",
     "box": [
       849,
       601,
@@ -295,7 +365,7 @@
   },
   {
     "asset": "cellulaire-brand-4.webp",
-    "source": "brand-4.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-4.jpeg",
     "box": [
       0,
       0,
@@ -309,7 +379,7 @@
   },
   {
     "asset": "cellulaire-brand-5.webp",
-    "source": "brand-5.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-5.jpeg",
     "box": [
       0,
       0,
@@ -323,7 +393,7 @@
   },
   {
     "asset": "cellulaire-brand-6.webp",
-    "source": "brand-6.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-6.jpeg",
     "box": [
       0,
       0,
@@ -337,7 +407,7 @@
   },
   {
     "asset": "cellulaire-brand-7.webp",
-    "source": "brand-7.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-7.jpeg",
     "box": [
       0,
       0,
@@ -351,7 +421,7 @@
   },
   {
     "asset": "cellulaire-brand-8.webp",
-    "source": "brand-8.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-8.jpeg",
     "box": [
       0,
       0,
@@ -365,7 +435,7 @@
   },
   {
     "asset": "cellulaire-brand-9.webp",
-    "source": "brand-9.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-9.jpeg",
     "box": [
       0,
       0,
@@ -379,7 +449,7 @@
   },
   {
     "asset": "cellulaire-brand-11.webp",
-    "source": "brand-11.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-11.jpeg",
     "box": [
       0,
       0,
@@ -393,7 +463,7 @@
   },
   {
     "asset": "cellulaire-brand-13.webp",
-    "source": "brand-13.jpeg",
+    "source": "C:\\Users\\zoz\\Desktop\\cellulaire\\tmp\\reference\\original\\brand-13.jpeg",
     "box": [
       0,
       0,

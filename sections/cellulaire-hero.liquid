@@ -1,12 +1,14 @@
-<section class="hero hero--{{ section.settings.variant }} {% if section.settings.composite_mobile and section.settings.mobile_image == blank %}hero--composite{% endif %} wrap">
+<section class="hero hero--{{ section.settings.variant }} {% if section.settings.composite_desktop and section.settings.image == blank %}hero--composite-desktop{% endif %} {% if section.settings.composite_mobile and section.settings.mobile_image == blank %}hero--composite{% endif %} wrap">
   <div class="hero-copy">
     {% if section.settings.eyebrow != blank %}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
     <h1>{{ section.settings.heading | escape | newline_to_br }}</h1>
     <p>{{ section.settings.description | escape }}</p>
     {% if section.settings.button_label != blank %}<a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} <span>→</span></a>{% endif %}
   </div>
-  <div class="hero-image desktop-only">{% render 'cellulaire-image', image: section.settings.image, fallback: section.settings.fallback, alt: section.settings.image_alt, loading: 'eager', sizes: '60vw' %}</div>
-  <div class="hero-image mobile-only">{% render 'cellulaire-image', image: section.settings.mobile_image, fallback: section.settings.mobile_fallback, alt: section.settings.image_alt, loading: 'eager', sizes: '100vw' %}</div>
+  {% assign desktop_asset = section.settings.fallback %}{% if section.settings.composite_desktop and section.settings.image == blank %}{% assign desktop_asset = section.settings.composite_fallback %}{% endif %}
+  {% assign mobile_asset = section.settings.mobile_fallback %}{% if section.settings.composite_mobile and section.settings.mobile_image == blank and section.settings.mobile_composite_fallback != blank %}{% assign mobile_asset = section.settings.mobile_composite_fallback %}{% endif %}
+  <div class="hero-image desktop-only">{% render 'cellulaire-image', image: section.settings.image, fallback: desktop_asset, alt: section.settings.image_alt, loading: 'eager', sizes: '100vw' %}</div>
+  <div class="hero-image mobile-only">{% render 'cellulaire-image', image: section.settings.mobile_image, fallback: mobile_asset, alt: section.settings.image_alt, loading: 'eager', sizes: '100vw' %}</div>
 </section>
 
 {% schema %}
@@ -73,10 +75,28 @@
     },
     {
       "type": "checkbox",
-      "id": "composite_mobile",
-      "label": "Use supplied composite mobile banner",
-      "info": "The PDF mobile banner contains lettering. Accessible text and a working link overlay are retained. Upload a clean photo to use native visible text.",
+      "id": "composite_desktop",
+      "label": "Use reference desktop banner",
+      "info": "Retains supplied artwork with accessible text and a working button. Upload a clean image for visible editable text.",
       "default": false
+    },
+    {
+      "type": "text",
+      "id": "composite_fallback",
+      "label": "Reference desktop banner",
+      "default": "cellulaire-hero-banner.webp"
+    },
+    {
+      "type": "checkbox",
+      "id": "composite_mobile",
+      "label": "Use reference mobile banner",
+      "info": "Retains supplied artwork with accessible text and a working button. Upload a clean image for visible editable text.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "mobile_composite_fallback",
+      "label": "Reference mobile banner"
     },
     {
       "type": "text",
@@ -88,7 +108,7 @@
       "type": "text",
       "id": "mobile_fallback",
       "label": "Bundled mobile asset",
-      "default": "cellulaire-hero-mobile.webp"
+      "default": "cellulaire-hero.webp"
     },
     {
       "type": "text",
